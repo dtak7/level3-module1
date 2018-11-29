@@ -22,18 +22,26 @@ public class _03_TestMatchingBrackets {
 	// A MATCHING CLOSING BRACKET
 	private boolean doBracketsMatch(String b) {
 		Stack<String> brackets = new Stack<String>();
+		
 		for (int i = 0; i < b.length(); i++) {
 			char c=b.charAt(i);
 			if (c=='{') {
 				brackets.push(b);
+				System.out.println("push");
 
 			}
-			if (c=='}') {
+			else if (c=='}') {
+				if(brackets.empty()) {
+					return false;
+				}
 				brackets.pop();
+				System.out.println("pop");
 			}
 		}
 		if (!brackets.empty()) {
+			
 			return false;
+			
 		} else {
 			return true;
 
