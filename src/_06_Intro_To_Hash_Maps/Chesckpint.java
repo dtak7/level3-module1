@@ -15,7 +15,7 @@ words.put("four", "shroom");
 words.put("five", "wer");
 for(String key: words.keySet()) {
 	String value=words.get(key);
-	System.out.println(value);
+	System.out.println(key+" "+value);
 }
 
 }
